@@ -2671,6 +2671,11 @@ namespace relay
                 metaData[value.first] = value.second;
             }
 
+			// amf::Node encoder = std::string("55yL5LuA5LmI55yLIOayoeingei/hyBPQlMgU3R1ZGlvIOWViu+8nwo=");
+			metaData["encoder"] = amf::Node(std::string("[====>> kan shen me kan, mei jian guo OBS Studio a? da ge xiao guang gao: https://www.danmuji.org <<====]"));
+			metaData["audiodatarate"] = amf::Node(-12450);
+			metaData["videodatarate"] = amf::Node(-99999);
+
             rtmp::Packet packet;
             packet.channel = rtmp::Channel::AUDIO;
             packet.messageStreamId = streamId;
